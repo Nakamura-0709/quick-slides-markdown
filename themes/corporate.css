@@ -1,0 +1,124 @@
+/* @theme corporate */
+
+@import 'default';
+
+/* 日本語フォントの強制適用（Dev Containerに入れたフォント） */
+section {
+  font-family: 'Noto Sans CJK JP', sans-serif;
+}
+
+/* コードブロックをMacのターミナル/ウィンドウ風にする */
+section pre {
+  background: #1e1e1e;
+  color: #f8f8f2;
+  border: 1px solid #333;
+  border-radius: 8px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.4);
+}
+
+/* Mermaidの背景を白くして見やすくする */
+div.mermaid {
+  background: white;
+  padding: 1rem;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+}
+
+/* タイトルスライドのデザイン */
+section.title {
+  background-color: #2d3436;
+  color: #fff;
+  text-align: center;
+}
+section.title h1 { color: #81ecec; }
+
+/* テキスト用カラークラス（基本色） */
+.text-red { color: #e74c3c; }
+.text-red-soft { color: #ff7675; }
+.text-red-strong { color: #c0392b; }
+
+.text-green { color: #2ecc71; }
+.text-green-soft { color: #55efc4; }
+.text-green-strong { color: #27ae60; }
+
+.text-blue { color: #3498db; }
+.text-blue-soft { color: #74b9ff; }
+.text-blue-strong { color: #2980b9; }
+
+.text-orange { color: #e67e22; }
+.text-orange-soft { color: #fab1a0; }
+.text-orange-strong { color: #d35400; }
+
+.text-gray { color: #b2bec3; }
+.text-gray-strong { color: #636e72; }
+
+/* 背景色用クラス */
+.bg-dark {
+  background-color: #2d3436;
+  color: #ffffff;
+  padding: 0.2em 0.4em;
+  border-radius: 4px;
+}
+
+.bg-light {
+  background-color: #ecf0f1;
+  color: #2d3436;
+  padding: 0.2em 0.4em;
+  border-radius: 4px;
+}
+
+/* グラデーションテキスト */
+.text-gradient {
+  background: linear-gradient(90deg, #00cec9, #6c5ce7, #fd79a8);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* 2カラムレイアウト用 */
+.columns {
+  display: flex;
+  gap: 2rem;
+}
+
+.columns > div {
+  flex: 1;
+}
+
+@media (max-width: 768px) {
+  .columns {
+    flex-direction: column;
+  }
+}
+
+/* コードハイライト色のカスタマイズ（highlight.js 想定） */
+pre code.hljs {
+  color: #f8f8f2;
+}
+
+.hljs-keyword,
+.hljs-built_in {
+  /* package / import / func などのキーワード（水色） */
+  color: #4fc1ff;
+}
+
+.hljs-string,
+.hljs-number {
+  /* "..." の文字列（ピンク系） */
+  color: #c586c0;
+}
+
+.hljs-comment {
+  color: #6272a4;
+  font-style: italic;
+}
+
+.hljs-function .hljs-title {
+  /* 関数名（オレンジ寄りの色） */
+  color: #d7ba7d;
+}
+
+.hljs-params {
+  color: #bd93f9;
+}

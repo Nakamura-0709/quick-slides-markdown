@@ -1,0 +1,23 @@
+{
+  "name": "Quick Slides Markdown Generator",
+  "image": "mcr.microsoft.com/devcontainers/typescript-node:24",
+  "features": {
+    "ghcr.io/devcontainers/features/git:1": {},
+    "ghcr.io/devcontainers/features/github-cli:1": {}
+  },
+  "postCreateCommand": "sudo apt-get update && sudo apt-get install -y chromium fonts-noto-cjk && npm install && git config --global --add safe.directory ${containerWorkspaceFolder}",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "marp-team.marp-vscode",
+        "bpruitt-goddard.mermaid-markdown-syntax-highlighting"
+      ],
+      "settings": {
+        "markdown.marp.chromePath": "/usr/bin/chromium",
+        "markdown.marp.enableHtml": true,
+        "markdown.preview.securityLevel": "allowScriptsAndAllContent"
+      }
+    }
+  }
+}
+
