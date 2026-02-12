@@ -1,0 +1,31 @@
+{
+  "name": "quick-slides-markdown",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/Nakamura-0709/quick-slides-markdown#readme",
+  "bugs": {
+    "url": "https://github.com/Nakamura-0709/quick-slides-markdown/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nakamura-0709/quick-slides-markdown.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "pdf": "marp --pdf --allow-local-files --html -I slides",
+    "pdfx": "marp --pptx --allow-local-files --html -I slides",
+    "preview": "marp -s slides"
+  },
+  "devDependencies": {
+    "@marp-team/marp-cli": "^4.2.3"
+  },
+  "marp": {
+    "themeSet": [
+      "./themes/corporate.css"
+    ]
+  }
+}
